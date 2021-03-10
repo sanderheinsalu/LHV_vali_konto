@@ -1,0 +1,21 @@
+// ==UserScript==
+// @name         Ava veel lehti
+// @namespace    http://tampermonkey.net/
+// @version      1.0
+// @description  Ava teatud veebilehed kui oled enda määratud lehel. Asenda https://id.lhv.ee/portfolio/view.cfm?vi=0 enda määratud lehega ja allpool window.open käsus nende lehtedega, mida soovid avada.
+// @author       Sander Heinsalu
+// @match        https://id.lhv.ee/portfolio/view.cfm?vi=0
+// @icon         https://www.google.com/s2/favicons?domain=tampermonkey.net
+// @grant        none
+// ==/UserScript==
+
+(function() {
+    'use strict';
+
+    //Ülemine url window.open nimekirjas avaneb kõige parempoolsemas veebilehitseja sakis, alumine url vasakpoolsemas jne.
+    window.open('https://nasdaqbaltic.com/statistics/en/instrument/LT0000127466/trading'); // Ava kolm esimest aktsiat Balti börsinimekirjas.
+    window.open('https://nasdaqbaltic.com/statistics/en/instrument/EE3100034653/trading'); // Asenda enda soovitud veebiaadressidega.
+    window.open('https://nasdaqbaltic.com/statistics/en/instrument/LT0000102337/trading'); // Need on lihtsalt näited.
+    window.open('https://id.lhv.ee/portfolio/trade1.cfm?vi=0'); // Ava aktsiakauplemise leht.
+
+})();
