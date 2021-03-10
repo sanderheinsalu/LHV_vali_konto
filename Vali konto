@@ -1,0 +1,18 @@
+// ==UserScript==
+// @name         Vali konto
+// @namespace    http://tampermonkey.net/
+// @version      1.0
+// @description  Vali sobiv konto, muutes kontonumbri jupi allpool selleks, mida soovid.
+// @author       Sander Heinsalu
+// @match        https://id.lhv.ee/portfolio/trade1.cfm?vi=0
+// @icon         https://www.google.com/s2/favicons?domain=tampermonkey.net
+// @grant        none
+// ==/UserScript==
+
+(function() {
+    'use strict';
+
+    // Asenda numbriline kood allpool numbritega, mis asuvad 9.-16. kohal selle konto numbris, mida veebilehe laadimisel automaatselt valida soovid.
+    $("#portfolio_id").val("12345678").change();
+
+})();
